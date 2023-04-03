@@ -1,0 +1,2 @@
+Add example .y4m files here
+You can convert mp4 or anything else to those either using ffmpeg or online
