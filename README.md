@@ -13,17 +13,20 @@ You can run `python zoombro.py --show` to run the bot browser in non-headerless 
 1. Install playwright `pip install playwright`
 
 
-2. Run `playwright install`
+2. Install curses `pip install curses` or `pip install windows-curses` (only if you are on windows)
 
 
-3. Put .y4m files into the /videos folder
+3. Run `playwright install`
 
 
-4. Run `python zoombro.py` you will be presented with a list of files that you can choose from
+4. Put .y4m files into the /videos folder
+
+
+5. Run `python zoombro.py` you will be presented with a list of files that you can choose from
    using the arrow keys and enter
 
 
-5. Put in your desired name
+6. Put in your desired name
 
 
-6. Paste in the zoom meeting join link
+7. Paste in the zoom meeting join link

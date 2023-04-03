@@ -3,12 +3,9 @@ import curses
 
 
 def select_option(stdscr, options):
-    """
-    Display a list of options to the user and capture arrow key input
-    to select an option. Returns the index of the selected option.
-    """
     current_row = 0
     stdscr.clear()
+
     while True:
         for i, option in enumerate(options):
             x = 2
@@ -17,8 +14,10 @@ def select_option(stdscr, options):
                 stdscr.addstr(y, x, "> " + option, curses.A_REVERSE)
             else:
                 stdscr.addstr(y, x, "  " + option)
+
         stdscr.refresh()
         key = stdscr.getch()
+
         if key == curses.KEY_UP and current_row > 0:
             current_row -= 1
         elif key == curses.KEY_DOWN and current_row < len(options) - 1:
@@ -31,7 +30,6 @@ def load_input(stdscr):
     path = os.path.join(os.getcwd(), "videos")
     files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
 
-    # Select an option from the list
     options = files
     option_index = select_option(stdscr, options)
     selected_option = options[option_index]
